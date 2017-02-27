@@ -1,0 +1,173 @@
+.main{
+	width: 1170px;
+	margin: 0 auto;
+}
+.person{
+	position: relative;
+	animation-name: walk;
+	animation-duration: 5s;
+}
+
+.person .head{
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	background: #666665;
+}
+
+.person .body{
+	width: 8px;
+	height: 150px;
+	background: #666665;
+	position: absolute;
+	border-radius: 10px; 
+	left: 45px;
+
+}
+
+.person .body .part{
+	width: 8px;
+	height: 65px;
+	background: #666665;
+	border-radius: 15px;
+}
+
+.person .body .arm:first-child{
+	position: absolute;
+	animation-name: first_arm;
+	animation-duration: 5s;
+}
+
+.person .body .arm:first-child .part:first-child{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	transform: rotate(30deg); 
+}
+
+.person .body .arm:first-child .part:nth-child(2){
+	position: absolute;
+	top: 64px;
+	right: 26px;
+	transform: rotate(5deg);
+}
+
+.person .body .arm:nth-child(2){
+	position: absolute;
+	transform: rotateY(180deg);
+	animation-name: second_arm;
+	animation-duration: 5s;
+}
+.person .body .arm:nth-child(2) .part:first-child{
+	position: absolute;
+	top: 11px;
+	right: 14px;
+	transform: rotate(20deg);
+}
+
+.person .body .arm:nth-child(2) .part:nth-child(2){
+	position: absolute;
+	top: 63px;
+	right: 37px;
+	transform: rotate(30deg);
+}
+
+.person .body .leg1{
+	position: absolute;
+	animation-name: first_leg;
+	animation-duration: 5s;
+}
+
+.person .body .leg1 .part:first-child{
+	position: absolute;
+	top: 144px;
+	right: 4px;
+	transform: rotate(20deg); 
+}
+
+.person .body .leg1 .part:nth-child(2){
+	position: absolute;
+	top: 200px;
+	right: 32px;
+	transform: rotate(35deg); 
+}
+
+.person .body .leg2{
+	position: absolute;
+	transform: rotateY(180deg);
+	animation-name: second_leg;
+	animation-duration: 5s;
+}
+
+
+.person .body .leg2 .part:first-child{
+	position: absolute;
+	top: 140px;
+	right: 21px;
+	transform: rotate(40deg); 
+}
+
+.person .body .leg2 .part:nth-child(2){
+	position: absolute;
+	top: 193px;
+	right: 50px;
+	transform: rotate(15deg);
+}
+
+@keyframes walk{
+	from{
+		top: 0;
+		left: 0;
+	}
+
+	to{
+		top: 0;
+		left: 800px;
+	}
+}
+
+@keyframes first_arm{
+	0%{ 
+		transform: rotate(-10deg); 
+	}
+    100%{ 
+    	transform: rotate(-10deg);
+    }
+
+}
+
+@keyframes second_arm{
+	0%{ 
+		transform: rotate(-40deg); 
+	}
+
+    50%{
+    	 transform: rotate(-10deg);
+    }
+    
+    100%{ 
+    	transform: rotate(-40deg);
+    }
+
+}
+
+/*@keyframes first_leg{
+	0%{
+		transform: rotate(0deg);
+		 transform-origin:top;
+	}
+
+	100%{
+		transform: rotate(-25deg);
+	}
+}*/
+
+/*@keyframes second_leg{
+	0%{
+		transform: rotateY(0deg);
+	}
+
+	100%{
+		transform: rotateY(35deg);
+	}
+}*/
